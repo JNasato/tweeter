@@ -1,0 +1,23 @@
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+#logo {
+  font-family: 'Bungee', cursive;
+  font-size: 1.5em;
+  float: left;
+  padding: 1.5em;
+}
+
+nav span {
+  float: right;
+  padding: 1.5em 2.5em;
+}

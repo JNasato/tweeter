@@ -1,29 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- External Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+    rel="stylesheet">
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span id="logo">tweeter</span>
+    <span><strong>Write</strong> a new tweet</span>
+  </nav>
+
+  <header>
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2><strong>Jereby</strong> Nasbabo</h2>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+
+    <!-- New Tweet input form -->
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form method="POST" action="/tweets">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <button type="submit">Tweet</button>
+        <output name="counter" class="counter" for="tweet-text">140</output>
+      </form>
+    </section>
+
+    <p>
+      Curabitur vestibulum sed ipsum ut convallis. Praesent non hendrerit orci. Maecenas pellentesque elit risus, at
+      maximus purus vestibulum nec. Duis sit amet est viverra velit vulputate accumsan. Cras ultrices, felis
+      bibendum
+      ornare fringilla, elit magna porttitor quam, sit amet tempus dui dui eget dui. Vestibulum volutpat nulla ut mi
+      semper, vitae porttitor urna accumsan. Suspendisse elementum nibh ut diam convallis luctus. Mauris egestas
+      tempus
+      orci, at tincidunt orci sollicitudin porttitor. Quisque efficitur diam velit, quis sollicitudin tortor tempus
+      sed.
+    </p>
+    <p>
+      Sed vel lorem congue, dignissim sem eget, tristique justo. Sed egestas pellentesque aliquam. Morbi vestibulum
+      et
+      urna ut efficitur. Morbi urna purus, commodo sed odio id, elementum tempus ex. Nam auctor ipsum et velit
+      malesuada
+      ullamcorper. Curabitur ut tortor ac ligula commodo tristique eget et augue. Aliquam nec finibus arcu. Nulla
+      feugiat, metus ullamcorper maximus sodales, massa urna mollis odio, ac ultrices nibh nibh ac turpis. Sed eget
+      massa ac mi efficitur sagittis. Vivamus egestas dui sit amet dui euismod iaculis.
+    </p>
+    <p>
+      Vivamus ac ligula vehicula, gravida elit ac, dapibus turpis. Nam blandit dui sapien, quis commodo ligula
+      tempor
+      quis. Curabitur vel ex at diam pharetra ornare nec sit amet lorem. Cras suscipit bibendum aliquam. Sed non mi
+      et
+      lacus dignissim bibendum ut sed eros. Pellentesque habitant morbi tristique senectus et netus et malesuada
+      fames
+      ac turpis egestas. Morbi imperdiet blandit sagittis. Integer condimentum, dolor ac ultrices bibendum, justo
+      enim
+      mattis mauris, nec gravida tortor enim eget dui. Aliquam pellentesque elementum aliquet. In suscipit vitae
+      eros at
+      luctus. Quisque sodales efficitur enim, quis maximus arcu malesuada id. Morbi placerat quis tellus sed
+      molestie.
+      Donec ornare neque at tortor feugiat mollis.
+      <br />
+      Suspendisse potenti. Nullam lobortis laoreet euismod. Donec nunc nisi, aliquet vitae velit non, semper
+      vehicula
+      metus. Duis ut interdum lorem. Integer leo ligula, malesuada ac ipsum eu, ullamcorper tincidunt ipsum.
+      Curabitur
+      ac egestas elit. Cras sit amet erat id mauris congue dignissim quis ac purus. Suspendisse vel mi purus.
+      Suspendisse ullamcorper scelerisque lectus, eu molestie tortor venenatis ut. Donec eget massa pellentesque,
+      vulputate orci eget, accumsan sapien. Curabitur convallis sodales velit, vel consectetur sapien viverra et.
+      Integer bibendum non odio suscipit consequat. Fusce sed sollicitudin sem, nec malesuada tortor. Mauris
+      volutpat
+      augue at arcu ultricies, at congue turpis molestie.
+    </p>
+    <p>
+      Nullam eget ante sollicitudin, luctus dui quis, mollis nisl. Pellentesque in sapien euismod, iaculis libero
+      et,
+      faucibus enim. Aenean eget eleifend nulla. Donec quis gravida ex. Maecenas mollis nibh in lectus finibus
+      suscipit.
+      Nulla lobortis lacus ac pharetra bibendum. Nam bibendum venenatis nibh lobortis luctus.
+
+      Suspendisse ut magna metus. Phasellus nibh elit, tincidunt at lacus a, vestibulum eleifend libero. Aliquam
+      gravida
+      erat erat, vitae tristique libero varius a. Nunc viverra accumsan erat suscipit iaculis. Integer dictum lacus
+      id
+      tortor malesuada, in ornare nisl sollicitudin. Etiam non ante a eros efficitur fermentum. Sed in mauris
+      maximus,
+      viverra tellus et, congue metus. Nullam finibus leo in felis imperdiet gravida.
+    </p>
+    <p>
+      Nulla lacinia mattis efficitur. Suspendisse lacus lectus, fringilla et dignissim id, dictum a risus. Orci
+      varius
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce id nisi suscipit nisl maximus
+      volutpat. Vestibulum non velit vitae sapien euismod ornare. Nam sed libero a mi gravida dapibus. Suspendisse
+      gravida tellus vitae iaculis rutrum. Sed iaculis congue ipsum, in congue nibh tincidunt sed. Donec sapien
+      diam,
+      rhoncus at eros varius, sodales mollis massa. Nunc in orci eget turpis bibendum blandit quis vitae nunc. Orci
+      varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et volutpat libero, eu
+      feugiat arcu. Ut elementum velit sapien, non maximus ligula vestibulum nec. Cras sit amet sem sit amet tortor
+      mattis mattis non ac libero. Aliquam ac dapibus augue.
+    </p>
+  </main>
+</body>
+
 </html>
