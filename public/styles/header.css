@@ -1,16 +1,16 @@
-header {
+#header {
   height: 400px;
   width: 100%;
   background-color: #fbb03b;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
 }
 
-header div {
+#header div {
   text-align: center;
   margin: 0 auto;
 }
 
-header h2 {
+#header h2 {
   margin-top: 15px;
   color: #FFFFFF;
   font-weight: 300;
