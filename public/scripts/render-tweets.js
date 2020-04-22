@@ -1,5 +1,6 @@
 const createTweetElement = function (tweetData) {
   const user = tweetData.user;
+
   const $markup = $('<article>').addClass('tweet');
 
   const $header = $('<header>');
@@ -18,6 +19,9 @@ const createTweetElement = function (tweetData) {
   $footer.append($date).append($footerDiv);
 
   $markup.append($header).append($p).append($footer);
+  return $markup;
+
+  // let markup = `
   //   <header>
   //     <div>
   //       <img src="${user.avatars}">
@@ -31,8 +35,8 @@ const createTweetElement = function (tweetData) {
   //     <div></div>
   //   </footer>
   // `;
-  // let $markup = $(`<article class="tweet">${markup}</article>`);
-  return $markup;
+  // let $tweet = $(`<article class="tweet">${markup}</article>`);
+  // return $tweet;
 };
 
 const renderTweets = function (data) {

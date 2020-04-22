@@ -16,15 +16,22 @@ $('.new-tweet form').submit(function (event) {
   event.preventDefault();
   const self = this;
   const data = $(this).serialize();
+  const charCount = $('#tweet-text').val().length;
+  console.log(charCount, data)
 
-  $.post('/tweets', data)
-    .then(() => {
-      console.log(data);
-      $(self)[0].reset();
-      $('#tweets-container').empty();
-      loadPosts();
-    })
-    .catch(err => console.log('Error: ', err))
+  if (data === 'text=') {
+    alert('Empty tweets cannot be submitted');
+  } else if (charCount > 140) {
+    alert('Your tweet must be below 140 characters');
+  } else {
+    $.post('/tweets', data)
+      .then(() => {
+        $(self)[0].reset();
+        $('#tweets-container').empty();
+        loadPosts();
+      })
+      .catch(err => console.log('Error: ', err))
+  }
 });
 
 loadPosts();
