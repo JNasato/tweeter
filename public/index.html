@@ -21,13 +21,6 @@
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/posted-tweet.css" type="text/css" />
 
-
-  <!-- External JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -63,23 +56,18 @@
       </form>
     </section>
 
-    <section>
-      <article class="tweet">
-        <header>
-          <div>
-            <img src="/images/profile-hex.png">
-            <span>Newton</span>
-          </div>
-          <span class="handle">@SirIsaac</span>
-        </header>
-        <p>If I have seen further it is by standing on the shoulders of giants</p>
-        <footer>
-          <span>10 days ago</span>
-          <div></div>
-        </footer>
-      </article>
+    <section id="tweets-container">
+      <!-- render tweets from server database -->
     </section>
   </main>
+
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/render-tweets.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </body>
 
 </html>
