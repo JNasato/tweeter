@@ -10,11 +10,6 @@ function loadPosts() {
     .catch(err => console.log('Error: ', err))
 }
 
-$('.composer').click(function (event) {
-  $('.new-tweet').slideToggle();
-  $('#tweet-text').focus();
-});
-
 $('.new-tweet form').submit(function (event) {
   event.preventDefault();
 
