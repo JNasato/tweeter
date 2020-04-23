@@ -1,7 +1,5 @@
 /*
  * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
 function loadPosts() {
@@ -12,18 +10,25 @@ function loadPosts() {
     .catch(err => console.log('Error: ', err))
 }
 
+$('.composer').click(function (event) {
+  $('.new-tweet').slideToggle();
+  $('#tweet-text').focus();
+});
+
 $('.new-tweet form').submit(function (event) {
   event.preventDefault();
+
   const self = this;
   const data = $(this).serialize();
   const charCount = $('#tweet-text').val().length;
   console.log(charCount, data)
 
   if (data === 'text=') {
-    alert('Empty tweets cannot be submitted');
+    $('.alert').text('⚠️ Empty tweets cannot be submitted').slideDown(600);
   } else if (charCount > 140) {
-    alert('Your tweet must be below 140 characters');
+    $('.alert').text('⚠️ Your tweet must be below 140 characters').slideDown(600);
   } else {
+    $('.alert').slideUp(200);
     $.post('/tweets', data)
       .then(() => {
         $(self)[0].reset();

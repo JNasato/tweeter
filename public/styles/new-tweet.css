@@ -1,7 +1,17 @@
 .new-tweet {
+  display: none;
   width: 90%;
   margin: 0 auto;
   font-weight: 600;
+}
+
+.alert {
+  display: none;
+  background-color: #f4f1ec;
+  color: #B80F0A;
+  padding: 10px 25px;
+  border: 3px solid #B80F0A;
+  margin-bottom: 25px;
 }
 
 #tweet-text {
@@ -11,7 +21,7 @@
   background-color: #f4f1ec;
   border: none;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -29,6 +39,7 @@
   background-color: #4056A1;
   padding: 5px 12px;
   float: left;
+  cursor: pointer;
 }
 
 /* .new-tweet button:hovor {
