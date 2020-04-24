@@ -19,3 +19,18 @@
 strong {
   font-weight: 700;
 }
+
+.likes-reports span {
+  padding: 10px;
+  font-size: 18px;
+  color: #545149;
+  display: none;
+}
+
+#like {
+  color: #FF4040;
+}
+
+#report {
+  color: #4056A1;
+}
