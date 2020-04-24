@@ -15,3 +15,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- MD5
+
+## Features
+
+- Optimized for the tablet and large desktop screens
+- Click 'Write a new tweet' to bring the tweet form into focus
+- Create a personalized tweet from a randomly generated 'character'
+- Browse through the list of tweets at your leisure
+- Use buttons in the tweet window to like / report
