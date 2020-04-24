@@ -4,8 +4,7 @@
   margin: 0 auto;
   font-weight: 600;
 }
-
-.alert {
+.new-tweet .alert {
   display: none;
   background-color: #f4f1ec;
   color: #B80F0A;
@@ -13,27 +12,20 @@
   border: 3px solid #B80F0A;
   margin-bottom: 25px;
 }
-
-#tweet-text {
+.new-tweet #tweet-text {
   width: 100%;
   height: 50px;
   margin-top: 10px;
   background-color: #f4f1ec;
   border: none;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   font-weight: 400;
 }
-
 .new-tweet footer {
   border-top: 5px solid #545149;
   padding: 20px 0px 40px;
 }
-
-.new-tweet button, .counter {
-  font-family: 'Bungee', sans-serif;
-}
-
 .new-tweet button {
   color: #FFFFFF;
   background-color: #4056A1;
@@ -42,22 +34,22 @@
   cursor: pointer;
   border-radius: 7px;
 }
-
 .new-tweet button:hover {
   position: relative;
   right: 6px;
   bottom: 3px;
-  width: 120px;
+  width: 124px;
   height: 45px;
   border: 3px outset;
 }
-
-.counter {
+.new-tweet .counter {
   float: right;
 }
-
-.negative-count {
+.new-tweet button, .new-tweet .counter {
+  font-family: "Bungee", sans-serif;
+}
+.new-tweet .negative-count {
   color: #B80F0A;
 }
 
-
+/*# sourceMappingURL=new-tweet.css.map */

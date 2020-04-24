@@ -23,6 +23,8 @@
 
   main .scroll-btn {
     left: 18%;
+    width: 100px;
+    height: 100px;
   }
 }
 

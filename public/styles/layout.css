@@ -32,9 +32,9 @@ main .scroll-btn {
   display: none;
   position: fixed;
   bottom: 6%;
-  right: 1%;
-  width: 100px;
-  height: 100px;
+  right: 2%;
+  width: 80px;
+  height: 80px;
   padding-bottom: 25px;
   border: none;
   border-radius: 50%;
