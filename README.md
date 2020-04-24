@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of desktop view tweets"]()
-!["Screenshot of tablet view tweets"]()
-!["Screenshot of tweet compose box"]()
+!["Screenshot of desktop view tweets"](https://raw.githubusercontent.com/JNasato/tweeter/master/docs/Tweeter_desktop-view.png)
+!["Screenshot of tablet view tweets"](https://raw.githubusercontent.com/JNasato/tweeter/master/docs/Tweeter_tablet-view.png)
+!["Screenshot of tweet compose box"](https://raw.githubusercontent.com/JNasato/tweeter/master/docs/Tweeter_tweet-form.png)
 
 ## Getting Started
 
