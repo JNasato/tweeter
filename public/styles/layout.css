@@ -28,6 +28,19 @@ main {
   margin: 0 auto;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+main .scroll-btn {
+  display: none;
+  position: fixed;
+  bottom: 6%;
+  right: 1%;
+  width: 100px;
+  height: 100px;
+  padding-bottom: 25px;
+  border: none;
+  border-radius: 50%;
+  font-size: 70px;
+  background-color: #FF4040;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  color: #FFFFFF;
+  cursor: pointer;
+}

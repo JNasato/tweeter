@@ -1,7 +1,6 @@
 /*
  * Client-side JS logic goes here
  */
-
 function loadPosts() {
   $.getJSON('/tweets')
     .then((tweets) => {
@@ -35,5 +34,6 @@ $('.new-tweet form').submit(function (event) {
 });
 
 loadPosts();
+
 
 

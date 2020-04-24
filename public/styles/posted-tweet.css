@@ -7,12 +7,12 @@ article.tweet {
 }
 
 .tweet header {
-  padding: 30px 60px;
+  padding: 20px 40px;
 }
 
 .handle {
   position: relative;
-  top: 25px;
+  top: 28px;
   float: right;
   font-weight: 600;
   color: #BDCCCE;
@@ -37,17 +37,29 @@ article.tweet {
 .tweet p {
   max-width: 100%;
   clear: both;
-  padding: 30px 30px 0;
+  padding: 15px 30px 0;
   font-weight: 300;
 }
 
 .tweet footer {
   padding: 20px;
   border-top: 5px solid #545149;
+  font-size: 14px;
 }
 
-.tweet footer span {
-  font-size: 14px;
+.tweet footer div {
+  float: right;
+  font-size: 30px;
+  opacity: 0;
+  padding: 0px 5px;
+}
+
+.heart:hover {
+  color: #FF4040;
+}
+
+.report:hover {
+  color: #4056A1;
 }
 
 article.tweet:hover {
@@ -57,6 +69,11 @@ article.tweet:hover {
 article.tweet:hover .handle {
   opacity: 1;
 }
+
+article.tweet:hover footer div {
+  opacity: 1;
+}
+
 
 article.tweet:hover p {
   font-weight: 400;

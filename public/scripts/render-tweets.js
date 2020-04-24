@@ -1,5 +1,21 @@
+const getCreationTime = function (date) {
+  let time = (Date.now() - date) / 60000;
+  if (time < 60) {
+    return `${Math.round(time)} minutes ago`;
+  } else if (time < 1440) {
+    return `${Math.round(time / 60)} hours ago`;
+  } else if (time < 10080) {
+    return `${Math.round(time / 1440)} days ago`;
+  } else if (time < 524160) {
+    return `${Math.round(time / 10080)} weeks ago`;
+  } else {
+    return `${Math.round(time / 524160)} years ago`;
+  }
+}
+
 const createTweetElement = function (tweetData) {
   const user = tweetData.user;
+  const created = getCreationTime(tweetData.created_at);
 
   const $markup = $('<article>').addClass('tweet');
 
@@ -14,29 +30,12 @@ const createTweetElement = function (tweetData) {
   const $p = $('<p>').text(tweetData.content.text);
 
   const $footer = $('<footer>');
-  const $date = $('<span>').text(tweetData.created_at);
-  const $footerDiv = $('<div>');
+  const $date = $('<span>').text(created);
+  const $footerDiv = $('<div class="report">⚑</div><div class="heart">♡</div>');
   $footer.append($date).append($footerDiv);
 
   $markup.append($header).append($p).append($footer);
   return $markup;
-
-  // let markup = `
-  //   <header>
-  //     <div>
-  //       <img src="${user.avatars}">
-  //       <span>${user.name}</span>
-  //     </div>
-  //     <span class="handle">${user.handle}</span>
-  //   </header>
-  //   <p>${tweetData.content.text}</p>
-  //   <footer>
-  //     <span>${tweetData.created_at}</span>
-  //     <div></div>
-  //   </footer>
-  // `;
-  // let $tweet = $(`<article class="tweet">${markup}</article>`);
-  // return $tweet;
 };
 
 const renderTweets = function (data) {
@@ -45,3 +44,4 @@ const renderTweets = function (data) {
     $('#tweets-container').prepend($tweet);
   }
 };
+

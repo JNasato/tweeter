@@ -1,4 +1,5 @@
-$('.composer').click(function (event) {
+
+$('.composer').click(function () {
   if ($('.new-tweet').is(':visible')) {
     $('.composer .icon').animate({
       top: '4px'
@@ -13,3 +14,23 @@ $('.composer').click(function (event) {
   }
 });
 
+$('#tweets-container').mouseover(function () {
+  $('.scroll-btn').fadeIn(600);
+  $('.composer').fadeOut();
+});
+
+$('#header, .new-tweet, nav').mouseover(function () {
+  $('.scroll-btn').fadeOut(200);
+  $('.composer').fadeIn();
+});
+
+$('.scroll-btn').click(function () {
+  $('.new-tweet').slideDown();
+  $('#tweet-text').focus();
+  $(window).scrollTop(0);
+  $('.scroll-btn').fadeOut(200);
+  $('.composer').fadeIn(100);
+  $('.composer .icon').animate({
+    top: '13px'
+  });
+});

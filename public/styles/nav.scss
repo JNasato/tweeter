@@ -1,0 +1,48 @@
+$dust-scratches: "https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"; 
+$orange: #fbb03b;
+$white: #FFFFFF;
+
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: $orange;
+  background-image: url($dust-scratches);
+
+  div {
+    float: right;
+    margin: 1.5em 2.5em;
+  }
+
+  .composer {
+    cursor: pointer;
+    border: none;
+    padding-bottom: 15px;
+    background-color: $orange;
+    background-image: url($dust-scratches);
+    color: $white;
+
+    .icon{
+      position: relative;
+      top: 5px;
+      color: #FF4040;
+      font-size: 40px;
+    }    
+  }
+}
+
+#logo {
+  font-family: 'Bungee', cursive;
+  font-size: 1.5em;
+  float: left;
+  padding: 1.5em;
+  color: $white;
+}
+
+
+
+
